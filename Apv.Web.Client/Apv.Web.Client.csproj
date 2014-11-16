@@ -38,10 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="gulpfile.js" />
+    <Content Include="src\index.html" />
+    <Content Include="setup.txt" />
+    <Content Include="bower.json" />
+    <Content Include="startConsole.bat" />
+    <Content Include="package.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
