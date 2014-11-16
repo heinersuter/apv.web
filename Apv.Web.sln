@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apv.Web.Api", "Apv.Web.Api\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apv.Web.Api.Tests", "Apv.Web.Api.Tests\Apv.Web.Api.Tests.csproj", "{1B5FB3C5-DEE0-4215-A022-5D2E61CA0C88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apv.Web.Client", "Apv.Web.Client\Apv.Web.Client.csproj", "{7DD29550-1ECC-4D61-AE56-0F9F007D0812}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1B5FB3C5-DEE0-4215-A022-5D2E61CA0C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B5FB3C5-DEE0-4215-A022-5D2E61CA0C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B5FB3C5-DEE0-4215-A022-5D2E61CA0C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD29550-1ECC-4D61-AE56-0F9F007D0812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD29550-1ECC-4D61-AE56-0F9F007D0812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD29550-1ECC-4D61-AE56-0F9F007D0812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD29550-1ECC-4D61-AE56-0F9F007D0812}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

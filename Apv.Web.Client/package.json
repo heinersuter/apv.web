@@ -1,0 +1,10 @@
+﻿{
+    "name": "apvweb",
+    "version": "0.0.1",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "bower": "^1.3.12",
+        "gulp": "^3.8.10"
+    }
+}

@@ -1,0 +1,9 @@
+install nodejs
+
+(create directoy as in error message if error occures)
+
+Change to project directory.
+
+run "npm install"
+
+run "bower install"
