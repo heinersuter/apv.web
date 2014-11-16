@@ -1,20 +1,29 @@
 ﻿namespace Apv.Web.Api.Controllers
 {
+    using System;
     using System.Collections.Generic;
+    using System.IO;
+    using System.Web.Hosting;
     using System.Web.Http;
     using Models;
 
     public class ArchiveItemGroupController : ApiController
     {
-        private readonly ArchiveItemGroup[] _archiveItemGroups =
-        {
-            new ArchiveItemGroup {Name = "Test 1", Description = "This is my first Folder", Path = "items/2011_Pfadis_SoLa"},
-            new ArchiveItemGroup {Name = "Test 2", Description = "This is my second Folder", Path = "items/1979_Wölfe_PfiLa"},
-        };
-
         public IEnumerable<ArchiveItemGroup> GetAllArchiveItemGroups()
         {
-            return _archiveItemGroups;
+            var rootDir = HostingEnvironment.MapPath("~/archiveItems");
+            if (rootDir == null)
+            {
+                throw new Exception("The root directory for the archiveItems seems not to exist!");
+            }
+
+            var directories = Directory.GetDirectories(rootDir);
+            var archiveItemGroups = new List<ArchiveItemGroup>();
+            foreach (var directory in directories)
+            {
+                archiveItemGroups.Add(new ArchiveItemGroup { Path = directory });
+            }
+            return archiveItemGroups;
         }
     }
 }
