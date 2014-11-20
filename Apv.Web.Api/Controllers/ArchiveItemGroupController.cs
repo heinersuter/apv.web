@@ -11,7 +11,7 @@
     {
         public IEnumerable<ArchiveItemGroup> GetAllArchiveItemGroups()
         {
-            var rootDir = HostingEnvironment.MapPath("~/archiveItems");
+            var rootDir = HostingEnvironment.MapPath("~/../archiveItems");
             if (rootDir == null)
             {
                 throw new Exception("The root directory for the archiveItems seems not to exist!");
