@@ -6,8 +6,8 @@ var bowerFiles = require('main-bower-files');
 gulp.task('default', function () {
     gulp.src('./src/index.html')
         .pipe(plugins.inject(
-            gulp.src(bowerFiles(), { read: false }), { name: 'bower' }))
-        //.pipe(plugins.inject(
-        //    plugins.es.merge(plugins.cssFiles, gulp.src('./src/app/**/*.js', { read: false }))))
+            gulp.src(bowerFiles(), { read: false }), { name: 'bower', addPrefix: '', relative: true }))
+        .pipe(plugins.inject(
+            gulp.src(['./src/**/*.js', './src/**/*.css'], { read: false }), { addPrefix: '', relative: true }))
         .pipe(gulp.dest('./src'));
 });
