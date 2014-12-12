@@ -39,12 +39,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="gulpfile.js" />
-    <Content Include="src\archive\archive.html" />
-    <Content Include="src\archive\archiveCtrl.js" />
+    <Content Include="src\app\archive\archive.html" />
+    <Content Include="src\app\archive\archiveCtrl.js" />
     <Content Include="src\index.html" />
     <Content Include="setup.txt" />
     <Content Include="bower.json" />
-    <Content Include="src\module.js" />
+    <Content Include="src\app\module.js" />
     <Content Include="startConsole.bat" />
     <Content Include="package.json" />
   </ItemGroup>
