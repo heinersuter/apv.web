@@ -1,9 +1,12 @@
-var bowerFiles = require('main-bower-files'),
-    inject = require('gulp-inject'),
-    stylus = require('gulp-stylus'),
-    es = require('event-stream');
+var gulp = require('gulp');
+var mainBowerFiles = require('main-bower-files');
+var inject = require('gulp-inject');
+var rename = require("gulp-rename");
 
-gulp.src('./src/index.html')
-  .pipe(inject(gulp.src(bowerFiles(), {read: false}), {name: 'bower'}))
-  .pipe(gulp.src('./src/app/**/*.js', {read: false}))
-  .pipe(gulp.dest('./build'));
+gulp.task('default', function () {
+    gulp.src('./src/index.template.html')
+        .pipe(rename('index.html'))
+        .pipe(inject(gulp.src(mainBowerFiles(), { read: false }), { name: 'bower', addPrefix: '', relative: true }))
+        .pipe(inject(gulp.src(['./src/**/*.js', './src/**/*.css'], { read: false }), { addPrefix: '', relative: true }))
+        .pipe(gulp.dest('./src'));
+});
