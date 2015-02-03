@@ -4,32 +4,32 @@ var inject = require('gulp-inject');
 var rename = require("gulp-rename");
 var ftp = require('gulp-ftp');
 var connect = require('gulp-connect');
-//var prompt = require('gulp-prompt');
+var prompt = require('gulp-prompt');
+var gutil = require('gulp-util');
 
 gulp.task('default', function () {
-    gulp.src('./src/index.template.html')
+    gulp.src('./index.template.html')
         .pipe(rename('index.html'))
         .pipe(inject(gulp.src(mainBowerFiles(), { read: false }), { name: 'bower', addPrefix: '', relative: true }))
-        .pipe(inject(gulp.src(['./src/**/*.js', './src/**/*.css'], { read: false }), { addPrefix: '', relative: true }))
-        .pipe(gulp.dest('./src'));
+        .pipe(inject(gulp.src(['./apvWebApp/**/*.js', './apvWebApp/**/*.css'], { read: false }), { addPrefix: '', relative: true }))
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('deploy', function () {
-    //return gulp.src('/')//it may be anything
-    //.pipe(prompt.prompt({
-    //    type: 'password',
-    //    name: 'pass',
-    //    message: 'Please enter your password'
-    //}, function (res) {
-        gulp.src(['src/**'])
+    return gulp.src('/')//it may be anything
+    .pipe(prompt.prompt({
+        type: 'password',
+        name: 'pass',
+        message: 'Please enter the password for webland ftp:'
+    }, function (res) {
+        gulp.src(['./**'])
         .pipe(ftp({
             host: 'alsolos.ch',
             user: 'www614',
-            pass: 'BlstnWe0',
-            //pass: res.pass,
+            pass: res.pass,
             remotePath: '/'
         }));
-    //}));
+    }));
 });
 
 gulp.task('connect', function () {
