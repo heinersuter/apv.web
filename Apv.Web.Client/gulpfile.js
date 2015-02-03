@@ -3,6 +3,7 @@ var mainBowerFiles = require('main-bower-files');
 var inject = require('gulp-inject');
 var rename = require("gulp-rename");
 var ftp = require('gulp-ftp');
+var connect = require('gulp-connect');
 
 gulp.task('default', function () {
     gulp.src('./src/index.template.html')
@@ -20,4 +21,9 @@ gulp.task('deploy', function () {
                 pass: '1234',
                 remotePath: '/'
             }));
+});
+
+gulp.task('connect', function() {
+	connect.server({
+	});
 });
