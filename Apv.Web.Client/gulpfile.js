@@ -5,6 +5,7 @@ var rename = require("gulp-rename");
 var ftp = require('gulp-ftp');
 var connect = require('gulp-connect');
 var prompt = require('gulp-prompt');
+var gutil = require('gulp-util');
 
 gulp.task('default', function () {
     gulp.src('./index.template.html')
@@ -27,7 +28,8 @@ gulp.task('deploy', function () {
             user: 'www614',
             pass: res.pass,
             remotePath: '/'
-        }));
+        }))
+        .pipe(gutil.noop());
     }));
 });
 
