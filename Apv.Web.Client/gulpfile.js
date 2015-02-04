@@ -5,7 +5,6 @@ var rename = require("gulp-rename");
 var ftp = require('gulp-ftp');
 var connect = require('gulp-connect');
 var prompt = require('gulp-prompt');
-var gutil = require('gulp-util');
 
 gulp.task('default', function () {
     gulp.src('./index.template.html')
