@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Diagnostics;
     using System.IO;
     using System.Web.Hosting;
     using System.Web.Http;
@@ -9,9 +10,19 @@
 
     public class ArchiveItemGroupController : ApiController
     {
+        // Debug local: http://localhost:49538/api/ArchiveItemGroup
         public IEnumerable<ArchiveItemGroup> GetAllArchiveItemGroups()
         {
-            var rootDir = HostingEnvironment.MapPath("~/../archiveItems");
+            string rootDir;
+            if (Debugger.IsAttached)
+            {
+                rootDir = HostingEnvironment.MapPath("~/archiveItems");
+            }
+            else
+            {
+                rootDir = HostingEnvironment.MapPath("~/../archiveItems");
+            }
+
             if (rootDir == null)
             {
                 throw new Exception("The root directory for the archiveItems seems not to exist!");
