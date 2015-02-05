@@ -1,13 +1,13 @@
-﻿angular.module('apvWebApp', ['ngRoute', 'ngResource']);
+﻿angular.module("apvWebApp", ["ngResource", "ui.router"]);
 
-angular.module('apvWebApp').config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: 'apvWebApp/archive/archive.html',
-        controller: 'ArchiveCtrl'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
-  }]);
+angular.module("apvWebApp").config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise("/initState");
+
+    $stateProvider
+        .state("initState", {
+            ulr: "/initState",
+            templateUrl: "apvWebApp/archive/archive.html"
+            //controller: "ArchiveCtrl"
+        });
+}]);
