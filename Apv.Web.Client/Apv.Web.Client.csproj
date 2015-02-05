@@ -38,12 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="apvWebApp\archive\archiveItemGroupService.js" />
     <Content Include="gulpfile.js" />
     <Content Include="apvWebApp\archive\archive.html" />
     <Content Include="apvWebApp\archive\archiveCtrl.js" />
     <Content Include="apvWebApp\module.js" />
     <Content Include="index.template.html" />
-    <Content Include="index.html" />
     <Content Include="setup.txt" />
     <Content Include="bower.json" />
     <Content Include="startConsole.bat" />
