@@ -23,13 +23,14 @@ gulp.task('deploy', function () {
         message: 'Please enter the password for webland ftp:'
     }, function (res) {
         gulp.src(['./**'])
-        .pipe(ftp({
-            host: 'alsolos.ch',
-            user: 'www614',
-            pass: res.pass,
-            remotePath: '/'
-        }))
-        .pipe(gutil.noop());
+			.pipe(ftp({
+				host: 'alsolos.ch',
+				user: 'www614',
+				pass: res.pass,
+				remotePath: '/'
+			}))
+			.pipe(gutil.noop(
+			));
     }));
 });
 

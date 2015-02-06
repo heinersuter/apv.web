@@ -39,6 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="apvWebApp\archive\archiveItemGroupService.js" />
+    <Content Include="apvWebApp\routing.js" />
     <Content Include="gulpfile.js" />
     <Content Include="apvWebApp\archive\archive.html" />
     <Content Include="apvWebApp\archive\archiveCtrl.js" />
@@ -75,6 +76,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties bower_1json__JSONSchema="http://json.schemastore.org/bower" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
