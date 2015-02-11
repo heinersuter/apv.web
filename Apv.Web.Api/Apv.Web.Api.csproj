@@ -78,10 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="archiveItems\1979_Wölfe_PfiLa_Kirchlerau\DSCF1246.JPG" />
-    <Content Include="archiveItems\1979_Wölfe_PfiLa_Kirchlerau\DSCF1247.JPG" />
-    <Content Include="archiveItems\2002_Pfadis_SoLa_Thun\IMG1008.jpg" />
-    <Content Include="archiveItems\2002_Pfadis_SoLa_Thun\IMG1009.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
