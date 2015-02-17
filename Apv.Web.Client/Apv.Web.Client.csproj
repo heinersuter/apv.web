@@ -39,12 +39,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="apvWebApp\archive\archiveItemGroupService.js" />
+    <Content Include="apvWebApp\index.template.html" />
     <Content Include="apvWebApp\routing.js" />
     <Content Include="gulpfile.js" />
     <Content Include="apvWebApp\archive\archive.html" />
     <Content Include="apvWebApp\archive\archiveCtrl.js" />
     <Content Include="apvWebApp\module.js" />
-    <Content Include="index.template.html" />
     <Content Include="setup.txt" />
     <Content Include="bower.json" />
     <Content Include="startConsole.bat" />
@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="First_Setup.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".bowerrc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -8,10 +8,16 @@ var prompt = require('gulp-prompt');
 var gutil = require('gulp-util');
 
 gulp.task('default', function () {
-    gulp.src('./index.template.html')
-        .pipe(rename('index.html'))
-        .pipe(inject(gulp.src(mainBowerFiles(), { read: false }), { name: 'bower', addPrefix: '', relative: true }))
-        .pipe(inject(gulp.src(['./apvWebApp/**/*.js', './apvWebApp/**/*.css'], { read: false }), { addPrefix: '', relative: true }))
+    gulp.src('apvWebApp/index.template.html')
+        .pipe(rename('apvWebApp/index.html'))
+        .pipe(inject(gulp.src(
+            mainBowerFiles(),
+            { read: false }),
+            { name: 'bower', addPrefix: '', relative: false, ignorePath: 'apvWebApp' }))
+        .pipe(inject(gulp.src(
+            ['apvWebApp/**/*.js', '!apvWebApp/lib/**/*.js', 'apvWebApp/**/*.css', '!apvWebApp/lib/**/*.css'],
+            { read: false }),
+            { addPrefix: '', relative: false, ignorePath: 'apvWebApp' }))
         .pipe(gulp.dest('.'));
 });
 
@@ -36,5 +42,6 @@ gulp.task('deploy', function () {
 
 gulp.task('connect', function () {
     connect.server({
+        root: 'apvWebApp'
     });
 });

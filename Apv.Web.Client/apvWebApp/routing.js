@@ -6,7 +6,7 @@
 	$stateProvider
 		.state("index", {
 			url: "/",
-			templateUrl: "apvWebApp/archive/archive.html",
+			templateUrl: "archive/archive.html",
 			controller: "ArchiveCtrl"
 		});
 }]);
