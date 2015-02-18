@@ -28,12 +28,12 @@ gulp.task('deploy', function () {
         name: 'pass',
         message: 'Please enter the password for webland ftp:'
     }, function (res) {
-        gulp.src(['./**'])
+        gulp.src(['apvWebApp/**'])
 			.pipe(ftp({
-				host: 'alsolos.ch',
-				user: 'www614',
+				host: 'heinersuter.ch',
+				user: 'heinersuter',
 				pass: res.pass,
-				remotePath: '/'
+				remotePath: '/httpdocs'
 			}))
 			.pipe(gutil.noop(
 			));
