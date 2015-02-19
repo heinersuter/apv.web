@@ -1,13 +1,16 @@
-﻿namespace Apv.Web.Api.Models
+﻿namespace Apv.Web.DataAccess.Model
 {
     using System.IO;
 
-    public class ArchiveItemGroup
+    public class ArchiveItemGroupConfig
     {
-        public string Name { get; set; }
+        public int ArchiveItemGroupConfigId { get; set; }
+
         public string FolderPath { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
+
+        public string Name { get; set; }
+
+        public string Note { get; set; }
 
         public string Directory
         {
