@@ -4,7 +4,7 @@
     using System.Linq;
     using Apv.Web.DataAccess.Model;
 
-    public class ArchiveItemGroupsService
+    public class ArchiveItemGroupsService : IArchiveItemGroupsService
     {
         public IEnumerable<ArchiveItemGroupConfig> GetAll()
         {
