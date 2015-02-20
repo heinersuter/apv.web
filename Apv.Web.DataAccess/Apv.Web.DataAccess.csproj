@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,8 +52,8 @@
     <Compile Include="Model\ArchiveContext.cs" />
     <Compile Include="Model\ArchiveItemGroupConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\ArchiveItemGroupsService.cs" />
-    <Compile Include="Service\IArchiveItemGroupsService.cs" />
+    <Compile Include="Service\ArchiveItemGroupsConfigService.cs" />
+    <Compile Include="Service\IArchiveItemGroupsConfigService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

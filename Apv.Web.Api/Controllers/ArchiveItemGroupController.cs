@@ -13,11 +13,17 @@
 
     public class ArchiveItemGroupController : ApiController
     {
+        private readonly IArchiveItemGroupsConfigService _service;
+
+        public ArchiveItemGroupController(IArchiveItemGroupsConfigService service)
+        {
+            _service = service;
+        }
+
         // Debug local: http://localhost:49538/api/ArchiveItemGroup
         public IEnumerable<ArchiveItemGroup> GetAllArchiveItemGroups()
         {
-            var archiveItemGroupsService = new ArchiveItemGroupsService();
-            var groupConfigs = archiveItemGroupsService.GetAll().ToList();
+            var groupConfigs = _service.GetAll().ToList();
 
             var directories = ReadDirectories();
             var archiveItemGroups = MergeDirectoriesWithConfigs(directories, groupConfigs);
