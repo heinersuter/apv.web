@@ -23,6 +23,7 @@
 
         [AllowAnonymous]
         [Route("")]
+        [HttpGet]
         public IEnumerable<ArchiveItemGroup> GetAllArchiveItemGroups()
         {
             // Debug local: http://localhost:49538/api/ArchiveItemGroup
@@ -32,6 +33,14 @@
             var archiveItemGroups = MergeDirectoriesWithConfigs(directories, groupConfigs);
 
             return archiveItemGroups;
+        }
+
+        [AllowAnonymous]
+        [Route("")]
+        [HttpPost]
+        public void Test()
+        {
+            Console.WriteLine("Test");
         }
 
         private static IEnumerable<string> ReadDirectories()

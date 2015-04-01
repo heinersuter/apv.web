@@ -3,7 +3,6 @@ var mainBowerFiles = require('main-bower-files');
 var inject = require('gulp-inject');
 var rename = require("gulp-rename");
 var ftp = require('gulp-ftp');
-var connect = require('gulp-connect');
 var prompt = require('gulp-prompt');
 var gutil = require('gulp-util');
 var replace = require('gulp-replace');
@@ -69,11 +68,6 @@ gulp.task('ftp', function (done) {
 });
 
 gulp.task('connect', function () {
-    //connect.server({
-    //    root: 'apvWebApp',
-    //    livereload: true,
-    //    options: { port: 12346 }
-    //});
     gulp.src('apvWebApp')
         .pipe(webserver({
             livereload: true,
