@@ -11,6 +11,8 @@ namespace Apv.Web.Api
         {
             ConfigureOAuth(app);
 
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+
             var config = ConfigureWebApi();
             app.UseNinjectMiddleware(CreateKernel).UseNinjectWebApi(config);
         }
