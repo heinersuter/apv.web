@@ -3,9 +3,16 @@
     using System.Web.Http;
     using System.Web.Http.Cors;
 
-    public static class WebApiConfig
+    public partial class Startup
     {
-        public static void Register(HttpConfiguration config)
+        private HttpConfiguration ConfigureWebApi()
+        {
+            var config = new HttpConfiguration();
+            Register(config);
+            return config;
+        }
+
+        private void Register(HttpConfiguration config)
         {
             // Web API configuration and services
             var cors = new EnableCorsAttribute("*", "*", "*");

@@ -11,6 +11,7 @@
     using Apv.Web.DataAccess.Model;
     using Apv.Web.DataAccess.Service;
 
+    [RoutePrefix("api/ArchiveItemGroup")]
     public class ArchiveItemGroupController : ApiController
     {
         private readonly IArchiveItemGroupsConfigService _service;
@@ -20,9 +21,11 @@
             _service = service;
         }
 
-        // Debug local: http://localhost:49538/api/ArchiveItemGroup
+        [AllowAnonymous]
+        [Route("")]
         public IEnumerable<ArchiveItemGroup> GetAllArchiveItemGroups()
         {
+            // Debug local: http://localhost:49538/api/ArchiveItemGroup
             var groupConfigs = _service.GetAll().ToList();
 
             var directories = ReadDirectories();
