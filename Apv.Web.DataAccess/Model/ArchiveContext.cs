@@ -4,6 +4,10 @@ namespace Apv.Web.DataAccess.Model
 
     public class ArchiveContext : DbContext
     {
+        // Local reset DB
+        // 1. Delete files in App_Data
+        // 2. sqllocaldb stop MSSQLLocalDB
+        // 3. sqllocaldb delete MSSQLLocalDB
         public ArchiveContext()
             : base("name=ArchiveContext")
         {

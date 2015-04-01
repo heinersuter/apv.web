@@ -18,6 +18,8 @@
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

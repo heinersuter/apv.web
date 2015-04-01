@@ -155,9 +155,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Apv.Web.DataAccess.Mock\Apv.Web.DataAccess.Mock.csproj">
       <Project>{167842A3-2DFA-4D93-8AC8-145643E35645}</Project>
