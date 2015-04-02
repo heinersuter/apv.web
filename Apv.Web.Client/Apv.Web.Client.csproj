@@ -55,7 +55,6 @@
     <Content Include="apvWebApp\module.js" />
     <Content Include="setup.txt" />
     <Content Include="bower.json" />
-    <Content Include="startConsole.bat" />
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
