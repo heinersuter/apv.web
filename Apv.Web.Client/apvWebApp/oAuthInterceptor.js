@@ -1,11 +1,13 @@
-﻿angular.module("apvWebApp").factory('oAuthInterceptor', ['OAuthService', function (oAuthService) {
+angular.module("apvWebApp").factory('oAuthInterceptor', ['OAuthService', function (oAuthService) {
 
     return {
         request: function (config) {
             // This is just example logic, you could check the URL (for example)
-            //if (config.headers.Authorization === 'Bearer') {
-                //config.headers.Authorization = 'Bearer ' + oAuthService.token;
-            //}
+            console.log("interceptor " + oAuthService.token);
+            if (config.url.indexOf("/api/") > -1) {
+                console.log("interceptor add header " + oAuthService.token);
+                config.headers.Authorization = 'Bearer ' + oAuthService.token;
+            }
             return config;
         }
     };

@@ -21,7 +21,7 @@
             _service = service;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [Route("")]
         [HttpGet]
         public IEnumerable<ArchiveItemGroup> GetAllArchiveItemGroups()
@@ -35,7 +35,7 @@
             return archiveItemGroups;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [Route("")]
         [HttpPost]
         public void Test()

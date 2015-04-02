@@ -6,18 +6,16 @@
 
     function setGroups() {
         //archiveItemGroupService.save({ name: 'test' });
+        console.log("group send request");
         archiveItemGroupService.query(
                 function (groups) {
                     vm.groups = groups;
                 });
     }
 
-    //if (!loginService.isLoggedIn()) {
-    //    loginService.login(setGroups);
-    //} else {
-
-    loginService.login();
-    setGroups();
-
-    //}
+    if (!loginService.isLoggedIn()) {
+        loginService.login(setGroups);
+    } else {
+        setGroups();
+    }
 }]);

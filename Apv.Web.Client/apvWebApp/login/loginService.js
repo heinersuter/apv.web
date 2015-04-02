@@ -3,21 +3,18 @@ angular.module("apvWebApp").factory("LoginService", ['$resource', '$http', 'OAut
 
     var service = {};
 
-    service.login = function () {
-        $resource("http://heinersuter.ch/apvwebapi/token", {}, {
+    service.login = function (callback) {
+        console.log("login " + oAuthService.token);
+        $resource("http://localhost:49538/token", {}, {
             post: {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             }
         }).post(
             'grant_type=password&username=heiner&password=secret',
-        //}).post({
-        //    'grant_type': 'password',
-        //    'username': 'heiner',
-        //    'password': 'secret'
-        //},
         function (tokenObject) {
             oAuthService.token = tokenObject.access_token;
+            callback();
         });
     };
 
