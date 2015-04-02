@@ -26,9 +26,9 @@ gulp.task('prepareDeploy', function (done) {
 });
 
 gulp.task('setUrl', function (done) {
-    gulp.src(['apvWebApp/archive/archiveItemGroupService.js'])
-        .pipe(replace(/^(\s*return \$resource\(")(\S*)(\/api\/ArchiveItemGroup\/:id\/"\);)/gmi, '$1' + baseUrl + '$3'))
-        .pipe(gulp.dest('apvWebApp/archive/'))
+    gulp.src(['apvWebApp/module.js'])
+        .pipe(replace(/(^\s*\.constant\("BaseUrl", ")(\S*)("\);$)/gmi, '$1' + baseUrl + '$3'))
+        .pipe(gulp.dest('apvWebApp/'))
         .on('end', done);
 });
 

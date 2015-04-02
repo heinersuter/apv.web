@@ -1,5 +1,5 @@
-angular.module("apvWebApp").factory("OAuthService", function () {
-    "use strict";
+angular.module('apvWebApp').factory('OAuthService', function () {
+    'use strict';
 
     var service = {};
 

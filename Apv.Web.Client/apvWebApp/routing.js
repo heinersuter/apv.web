@@ -1,12 +1,12 @@
-﻿angular.module("apvWebApp").config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
-	"use strict";
+﻿angular.module('apvWebApp').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+	'use strict';
 
-	$urlRouterProvider.otherwise("/");
+	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
-		.state("index", {
-			url: "/",
-			templateUrl: "archive/archive.html",
-			controller: "ArchiveCtrl"
+		.state('index', {
+			url: '/',
+			templateUrl: 'archive/archive.html',
+			controller: 'ArchiveCtrl'
 		});
 }]);

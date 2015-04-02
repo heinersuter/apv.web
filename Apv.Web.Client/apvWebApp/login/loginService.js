@@ -1,11 +1,10 @@
-angular.module("apvWebApp").factory("LoginService", ['$resource', '$http', 'OAuthService', function ($resource, $http, oAuthService) {
-    "use strict";
+angular.module('apvWebApp').factory('LoginService', ['$resource', 'BaseUrl', '$http', 'OAuthService', function ($resource, baseUrl, $http, oAuthService) {
+    'use strict';
 
     var service = {};
 
     service.login = function (callback) {
-        console.log("login " + oAuthService.token);
-        $resource("http://localhost:49538/token", {}, {
+        $resource(baseUrl + '/token', {}, {
             post: {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
