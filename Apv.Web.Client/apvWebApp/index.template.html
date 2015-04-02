@@ -11,7 +11,40 @@
 </head>
 <body ng-app="apvWebApp" ng-controller="ArchiveCtrl as archive">
     <div class="container">
-        <p>Static HTML text <a ui-sref="index">Home</a> <a ui-sref="login">Login</a></p>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a ui-sref-active="active" ui-sref="index" class="navbar-brand">Archiv</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li ui-sref-active="active"><a ui-sref="login">Chronik</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li ui-sref-active="active"><a ui-sref="login">Login</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!--<div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li ui-sref-active="active" class="brand"><a ui-sref="index">Home</a></li>
+                    <li ui-sref-active="active"><a ui-sref="login">Login</a></li>
+                </ul>
+            </div>
+        </div>-->
+        <p>Static HTML text</p>
         <div ui-view></div>
     </div>
     <!-- bower:js -->
