@@ -9,9 +9,9 @@
             return userName;
         }
 
-        public async Task<string> FindUser(string userName)
+        public async Task<bool> FindUser(string username, string password)
         {
-            return userName;
+            return username == "h" && password == "s";
         }
     }
 }

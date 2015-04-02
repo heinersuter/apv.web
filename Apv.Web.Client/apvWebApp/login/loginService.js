@@ -3,18 +3,22 @@ angular.module('apvWebApp').factory('LoginService', ['$resource', 'BaseUrl', '$h
 
     var service = {};
 
-    service.login = function (callback) {
+    service.login = function (username, password, callback) {
         $resource(baseUrl + '/token', {}, {
             post: {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             }
         }).post(
-            'grant_type=password&username=heiner&password=secret',
-        function (tokenObject) {
-            oAuthService.token = tokenObject.access_token;
-            callback();
-        });
+            'grant_type=password&username=' + username + '&password=' + password,
+            function (tokenObject) {
+                oAuthService.token = tokenObject.access_token;
+                callback(service.isLoggedIn());
+            }, function (error) {
+                console.log(error);
+                oAuthService.token = null;
+                callback(service.isLoggedIn());
+            });
     };
 
     service.isLoggedIn = function () {

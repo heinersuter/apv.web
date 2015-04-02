@@ -7,6 +7,11 @@
 		.state('index', {
 			url: '/',
 			templateUrl: 'archive/archive.html',
-			controller: 'ArchiveCtrl'
+			controller: 'ArchiveCtrl as archive'
+		})
+		.state('login', {
+			url: '/login',
+			templateUrl: 'login/login.html',
+			controller: 'LoginCtrl as login'
 		});
 }]);

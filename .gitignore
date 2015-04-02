@@ -194,3 +194,5 @@ Apv.Web.Client/deploy
 Apv.Web.Client/apvWebApp/index.html
 Apv.Web.Client/apvWebApp/lib/
 Apv.Web.Client/Scripts/
+/Apv.Web.Client/apvWebApp/css/*.css
+/Apv.Web.Client/apvWebApp/css/*.map

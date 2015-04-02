@@ -42,6 +42,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="apvWebApp\archive\archiveItemGroupService.js" />
+    <Content Include="apvWebApp\css\login.css">
+      <DependentUpon>login.scss</DependentUpon>
+    </Content>
+    <Content Include="apvWebApp\css\login.min.css">
+      <DependentUpon>login.css</DependentUpon>
+    </Content>
+    <Content Include="apvWebApp\css\Styles.css">
+      <DependentUpon>styles.scss</DependentUpon>
+    </Content>
+    <Content Include="apvWebApp\css\Styles.min.css">
+      <DependentUpon>Styles.css</DependentUpon>
+    </Content>
     <Content Include="apvWebApp\index.template.html" />
     <Content Include="apvWebApp\login\login.html" />
     <Content Include="apvWebApp\login\loginCtrl.js" />
@@ -81,6 +93,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apvWebApp\css\styles.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apvWebApp\css\login.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apvWebApp\css\login.css.map">
+      <DependentUpon>login.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apvWebApp\css\Styles.css.map">
+      <DependentUpon>Styles.css</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

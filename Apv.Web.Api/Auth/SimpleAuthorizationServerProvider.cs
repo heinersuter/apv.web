@@ -13,13 +13,12 @@
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
             var repo = new AuthRepository();
-            var user = await repo.FindUser(context.UserName);
+            var isValidUser = await repo.FindUser(context.UserName, context.Password);
 
-            if (user == null)
+            if (!isValidUser)
             {
                 context.SetError("invalid_grant", "The user name or password is incorrect.");
                 return;

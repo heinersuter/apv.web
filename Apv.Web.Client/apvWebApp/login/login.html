@@ -1,7 +1,17 @@
-﻿<h1>Archiv</h1>
+﻿<h1>Login</h1>
 
-<p>{{ archive.test }}</p>
+<p>{{ login.test }}</p>
 
-<div ng-repeat="group in archive.groups">
-    <p>{{ group.FolderPath }}</p>
-</div>
+<form class="form-signin">
+    <h2 class="form-signin-heading">Bitt anmelden</h2>
+
+    <p ng-show="login.isInvalidAttemt" class="error">Der Benutzername oder das Passwort ist falsch.</p>
+
+    <label for="username" class="sr-only">Benutzername</label>
+    <input ng-model="login.username" type="text" id="username" class="form-control" placeholder="Benutzername" required autofocus>
+
+    <label for="password" class="sr-only">Passwort</label>
+    <input ng-model="login.password" type="password" id="password" class="form-control" placeholder="Passwort" required>
+
+    <button ng-click ="login.login()" class="btn btn-lg btn-primary btn-block" type="submit">Anmelden</button>
+</form>

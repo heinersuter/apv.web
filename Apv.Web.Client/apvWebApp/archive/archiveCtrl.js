@@ -4,16 +4,13 @@
     var vm = this;
     vm.test = 'Hello from ArchiveCtrl!';
 
-    function setGroups() {
+    if (loginService.isLoggedIn()) {
         archiveItemGroupService.query(
-            function (groups) {
+            function(groups) {
                 vm.groups = groups;
             });
+    } else {
+        vm.test = 'Not logged in';
     }
 
-    if (!loginService.isLoggedIn()) {
-        loginService.login(setGroups);
-    } else {
-        setGroups();
-    }
 }]);

@@ -40,7 +40,7 @@ gulp.task('index', function (done) {
             { read: false }),
             { name: 'bower', addPrefix: '', relative: false, ignorePath: 'apvWebApp' }))
         .pipe(inject(gulp.src(
-            ['apvWebApp/**/*.js', '!apvWebApp/lib/**/*.js', 'apvWebApp/**/*.css', '!apvWebApp/lib/**/*.css'],
+            ['apvWebApp/**/*.js', '!apvWebApp/lib/**/*.js', 'apvWebApp/css/styles.css', '!apvWebApp/lib/**/*.css'],
             { read: false }),
             { addPrefix: '', relative: false, ignorePath: 'apvWebApp' }))
         .pipe(gulp.dest('.'))
