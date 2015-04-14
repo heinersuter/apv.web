@@ -59,7 +59,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ArchiveItemGroupsTests.cs" />
+    <Compile Include="Model\ArchiveItemGroupsTests.cs" />
+    <Compile Include="ManageDbTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

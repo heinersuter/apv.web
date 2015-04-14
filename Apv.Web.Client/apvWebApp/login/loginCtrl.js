@@ -2,7 +2,6 @@
     'use strict';
 
     var vm = this;
-    vm.test = 'Hello from LoginCtrl!';
     
     vm.login = function() {
         loginService.login(vm.username, vm.password, function (isLoggedIn) {

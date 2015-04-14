@@ -1,7 +1,24 @@
 ﻿<h1>Archiv</h1>
 
-<p>{{ archive.test }}</p>
+<div class="well" ng-hide="archive.isLoggedIn">
+    Bitte einloggen um die Inhalte anzuzeigen (<a ui-sref="login">Login</a>).
+</div>
 
-<div ng-repeat="group in archive.groups">
-    <p>{{ group.FolderPath }}</p>
+<div class="row">
+    <div ng-repeat="group in archive.groups">
+        <div class="col-md-3">
+            <div class="archiveItemGroup">
+                <a ui-sref="archiveItemGroup({path: '{{ group.Directory }}'})">
+                    <img src="../images/folder.png" />
+                    <div>
+                        {{ group.Year }}<br />
+                        {{ group.Unit }}<br />
+                        {{ group.Type }}<br />
+                        {{ group.Name }}
+                    </div>
+                    <div class="clear"></div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

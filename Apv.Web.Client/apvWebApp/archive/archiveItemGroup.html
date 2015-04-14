@@ -1,0 +1,13 @@
+﻿<h1>Archiv {{group.path}}</h1>
+
+<div class="well" ng-hide="group.isLoggedIn">
+    Bitte einloggen um die Inhalte anzuzeigen (<a ui-sref="login">Login</a>).
+</div>
+
+<div class="row">
+    <div ng-repeat="item in group.items">
+        <div class="col-md-3">
+            <img class="archiveThumbnail img-responsive" ng-src="{{ group.baseUrl + '/api/ArchiveItemGroup/' + group.path + '/ArchiveItem/' + item.FileName }}" />
+        </div>
+    </div>
+</div>

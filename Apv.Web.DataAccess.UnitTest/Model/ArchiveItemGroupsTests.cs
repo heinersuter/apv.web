@@ -1,4 +1,4 @@
-﻿namespace Apv.Web.DataAccess.UnitTest
+﻿namespace Apv.Web.DataAccess.UnitTest.Model
 {
     using System;
     using System.Linq;

@@ -1,16 +1,16 @@
-﻿angular.module('apvWebApp').controller('ArchiveCtrl', ['ArchiveItemGroupService', 'LoginService', function (archiveItemGroupService, loginService) {
-    'use strict';
+﻿angular.module('apvWebApp').controller('ArchiveCtrl',
+    ['ArchiveItemGroupService', 'LoginService',
+        function (archiveItemGroupService, loginService) {
+            'use strict';
 
-    var vm = this;
-    vm.test = 'Hello from ArchiveCtrl!';
+            var vm = this;
+            vm.isLoggedIn = loginService.isLoggedIn();
 
-    if (loginService.isLoggedIn()) {
-        archiveItemGroupService.query(
-            function(groups) {
-                vm.groups = groups;
-            });
-    } else {
-        vm.test = 'Not logged in';
-    }
+            if (vm.isLoggedIn) {
+                archiveItemGroupService.getArchiveItemGroups(
+                    function (groups) {
+                        vm.groups = groups;
+                    });
+            }
 
-}]);
+        }]);
