@@ -15,19 +15,19 @@ var connectionString = '';
 
 gulp.task('prepareLocal', function (done) {
 	baseUrl = 'http://localhost:49538';
-	connectionString = 'Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFileName=|DataDirectory|\archive.mdf;Initial Catalog=db;Integrated Security=True;MultipleActiveResultSets=True';
+	connectionString = 'Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFileName=|DataDirectory|\\archive.mdf;Initial Catalog=db;Integrated Security=True;MultipleActiveResultSets=True';
 	done();
 });
 
 gulp.task('prepareRemote', function (done) {
 	baseUrl = 'http://heinersuter.ch/apvwebapi';
-	connectionString = 'Data Source=heinersuter.ch\SQLExpress,1435;Initial Catalog=db;Persist Security Info=True;User Id=heinersuter;Password=mesa9u#Udyju;MultipleActiveResultSets=True;App=EntityFramework';
+	connectionString = 'Data Source=heinersuter.ch\\SQLExpress,1435;Initial Catalog=db;Persist Security Info=True;User Id=heinersuter;Password=mesa9u#Udyju;MultipleActiveResultSets=True;App=EntityFramework';
 	done();
 });
 
 gulp.task('prepareDeploy', function (done) {
 	baseUrl = '/apvwebapi';
-	connectionString = 'Data Source=heinersuter.ch\SQLExpress,1435;Initial Catalog=db;Persist Security Info=True;User Id=heinersuter;Password=mesa9u#Udyju;MultipleActiveResultSets=True;App=EntityFramework';
+	connectionString = 'Data Source=heinersuter.ch\\SQLExpress,1435;Initial Catalog=db;Persist Security Info=True;User Id=heinersuter;Password=mesa9u#Udyju;MultipleActiveResultSets=True;App=EntityFramework';
 	done();
 });
 
