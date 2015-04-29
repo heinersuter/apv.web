@@ -1,3 +1,3 @@
 angular.module('apvWebApp', ['ngResource', 'ui.router'])
 
-    .constant('BaseUrl', '/apvwebapi');
+    .constant('BaseUrl', 'http://localhost:49538');
